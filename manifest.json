@@ -1,0 +1,795 @@
+{
+  "groups": 15,
+  "audio_files": 75,
+  "conversion_variants": [
+    "fixed",
+    "residual5400",
+    "joint1600"
+  ],
+  "refiner_schedule": [
+    20,
+    10,
+    5
+  ],
+  "check_points": {
+    "variants": {
+      "residual5400": {
+        "sha256": "7d717e6ce970325a3e0d06e5a6a0d448c8c718b9e087306e02128cf7f1780e2f",
+        "step": 5400,
+        "stage": "stage1"
+      },
+      "joint1600": {
+        "sha256": "472094d96c14f70f4a2ad9d7c5c62100ea6e8e7c2f4a7c8ea1ce92a46cb2e364",
+        "step": 1600,
+        "stage": "stage2"
+      }
+    }
+  },
+  "cases": [
+    {
+      "number": 1,
+      "id": "D01",
+      "original_github_pair": true,
+      "source_song": "后来",
+      "reference_song": "演员",
+      "direction_code": "FF",
+      "direction": "女 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D01/source.wav",
+          "sha256": "0e8fd1ea343612986638ae387286756d9c8d7fd51899d4f7611e0711fbd7a7d9",
+          "samples": 311520,
+          "sample_rate": 48000,
+          "duration_seconds": 6.49,
+          "aria_label": "D01 后来 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D01/reference.wav",
+          "sha256": "99bb4991e12cb8693b99d19e93816cdea8ab3a3cf26fc27de2e9799e07347e2d",
+          "samples": 156241,
+          "sample_rate": 48000,
+          "duration_seconds": 3.2550208333333335,
+          "aria_label": "D01 后来 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D01/fixed.wav",
+          "sha256": "cc90c255c588c6aec565f6811eac5e98a51c78e6a949b256c34cb7ca54624706",
+          "samples": 311552,
+          "sample_rate": 48000,
+          "duration_seconds": 6.490666666666667,
+          "aria_label": "D01 后来 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D01/residual5400.wav",
+          "sha256": "bac8bdeeb5d5c2c732d45c623b0d6c74cde7b1fa25cf5a262d25dc3a89273dc4",
+          "samples": 311552,
+          "sample_rate": 48000,
+          "duration_seconds": 6.490666666666667,
+          "aria_label": "D01 后来 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D01/joint1600.wav",
+          "sha256": "b100fff3ca8dd83d2edb9f96fcb46b0ea80cf7578b67c377a8d06fc8a39dc6ae",
+          "samples": 311552,
+          "sample_rate": 48000,
+          "duration_seconds": 6.490666666666667,
+          "aria_label": "D01 后来 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 2,
+      "id": "D02",
+      "original_github_pair": true,
+      "source_song": "小幸运",
+      "reference_song": "成都",
+      "direction_code": "FF",
+      "direction": "女 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D02/source.wav",
+          "sha256": "bf3ad1cd111e0a5058a08ebcbcecf4465d23ec04b6fafc63a8afe4b76fc4e8a4",
+          "samples": 209041,
+          "sample_rate": 48000,
+          "duration_seconds": 4.355020833333334,
+          "aria_label": "D02 小幸运 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D02/reference.wav",
+          "sha256": "2e0aeee31c56ab5aa1e30efd298ea3f383b6cb997dab9285afb8161bcc659cf0",
+          "samples": 379200,
+          "sample_rate": 48000,
+          "duration_seconds": 7.9,
+          "aria_label": "D02 小幸运 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D02/fixed.wav",
+          "sha256": "ba330bd8d1168cf2f533b8fcd9b710b71663a1b3958460fa662ec1350007346a",
+          "samples": 209152,
+          "sample_rate": 48000,
+          "duration_seconds": 4.357333333333333,
+          "aria_label": "D02 小幸运 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D02/residual5400.wav",
+          "sha256": "d8182623913cd1acad98102232ecfec02ee0eb1c2f7baf652d432b638f3e877b",
+          "samples": 209152,
+          "sample_rate": 48000,
+          "duration_seconds": 4.357333333333333,
+          "aria_label": "D02 小幸运 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D02/joint1600.wav",
+          "sha256": "622e802d1942ac6a3ec66c4cfc36bc8729cbc49902d17cb92656bfd2412fc7ca",
+          "samples": 209152,
+          "sample_rate": 48000,
+          "duration_seconds": 4.357333333333333,
+          "aria_label": "D02 小幸运 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 3,
+      "id": "D12",
+      "original_github_pair": true,
+      "source_song": "大鱼",
+      "reference_song": "天翻地覆",
+      "direction_code": "MM",
+      "direction": "男 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D12/source.wav",
+          "sha256": "c488f967541f6a35c405244c17427aea0d90a920912c2635bb2e0113000b4e5e",
+          "samples": 245760,
+          "sample_rate": 48000,
+          "duration_seconds": 5.12,
+          "aria_label": "D12 大鱼 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D12/reference.wav",
+          "sha256": "0af3ffd46c6e28da0400d7230ad81f84cc0c83d8ef0e1fdba5902d67dc500bd8",
+          "samples": 178080,
+          "sample_rate": 48000,
+          "duration_seconds": 3.71,
+          "aria_label": "D12 大鱼 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D12/fixed.wav",
+          "sha256": "813ef472ec9aa1fb49cc1cc7a060ca5e172b4da85093758b4683b5b9d8d4afdc",
+          "samples": 245760,
+          "sample_rate": 48000,
+          "duration_seconds": 5.12,
+          "aria_label": "D12 大鱼 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D12/residual5400.wav",
+          "sha256": "a97a9d4ba78ee8e56620e7788c5ddf404a1428a6e30a62f9f4654a38be9ac873",
+          "samples": 245760,
+          "sample_rate": 48000,
+          "duration_seconds": 5.12,
+          "aria_label": "D12 大鱼 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D12/joint1600.wav",
+          "sha256": "2e70f010c74a05f0cb7c4acb9c0d86c88562825d3c491ac39c7de872878b77a8",
+          "samples": 245760,
+          "sample_rate": 48000,
+          "duration_seconds": 5.12,
+          "aria_label": "D12 大鱼 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 4,
+      "id": "D23",
+      "original_github_pair": true,
+      "source_song": "晴天",
+      "reference_song": "玫瑰三愿",
+      "direction_code": "FM",
+      "direction": "女 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D23/source.wav",
+          "sha256": "7705178a51540872d299d79629d317fcba80f6f52bf1e2c3af9479e198c9dfd3",
+          "samples": 331200,
+          "sample_rate": 48000,
+          "duration_seconds": 6.9,
+          "aria_label": "D23 晴天 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D23/reference.wav",
+          "sha256": "8065d0203adc4c7771b26f94d4b01c1469a75a2d8bffe04211a777dd649542d6",
+          "samples": 426583,
+          "sample_rate": 48000,
+          "duration_seconds": 8.887145833333333,
+          "aria_label": "D23 晴天 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D23/fixed.wav",
+          "sha256": "d656ab65ecfb1450fa625b3a18974d936b8d8bc4ebbebc0301b96e5f9696bfb2",
+          "samples": 331264,
+          "sample_rate": 48000,
+          "duration_seconds": 6.9013333333333335,
+          "aria_label": "D23 晴天 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D23/residual5400.wav",
+          "sha256": "81f2ccd7a1b5b0fefe79b28c873ad1ff9cad48d03442f25c3ddbf19b85a4df28",
+          "samples": 331264,
+          "sample_rate": 48000,
+          "duration_seconds": 6.9013333333333335,
+          "aria_label": "D23 晴天 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D23/joint1600.wav",
+          "sha256": "1b6f675196c69f61651b8f0a7275ec8b51062ad5bd66625fd3825e3c7d27669e",
+          "samples": 331264,
+          "sample_rate": 48000,
+          "duration_seconds": 6.9013333333333335,
+          "aria_label": "D23 晴天 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 5,
+      "id": "D31",
+      "original_github_pair": true,
+      "source_song": "陪你度过漫长岁月",
+      "reference_song": "从前慢",
+      "direction_code": "MF",
+      "direction": "男 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D31/source.wav",
+          "sha256": "c7dd41a618972c27c2c435a0581452266bbaee7ccb1828bd4311215b6b9255b8",
+          "samples": 198240,
+          "sample_rate": 48000,
+          "duration_seconds": 4.13,
+          "aria_label": "D31 陪你度过漫长岁月 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D31/reference.wav",
+          "sha256": "e9ff569d73856d1a5ab4ddda41a630ba793bdecf2f0f42bc1d38a817e6f8879d",
+          "samples": 163003,
+          "sample_rate": 48000,
+          "duration_seconds": 3.3958958333333333,
+          "aria_label": "D31 陪你度过漫长岁月 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D31/fixed.wav",
+          "sha256": "89fbf6e9ae3dc71ab660c12d6cbff753b61079b7f1ae0ea4adee2a4a16c83deb",
+          "samples": 198144,
+          "sample_rate": 48000,
+          "duration_seconds": 4.128,
+          "aria_label": "D31 陪你度过漫长岁月 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D31/residual5400.wav",
+          "sha256": "523cb289541bea386a8bd62027ac31d81059fd922c7ee8a29cf789b28ba1be33",
+          "samples": 198144,
+          "sample_rate": 48000,
+          "duration_seconds": 4.128,
+          "aria_label": "D31 陪你度过漫长岁月 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D31/joint1600.wav",
+          "sha256": "ea73d8c5f34fdee4e3f7a7fe65e8f7406dcc260cc5421510dcd078368295085d",
+          "samples": 198144,
+          "sample_rate": 48000,
+          "duration_seconds": 4.128,
+          "aria_label": "D31 陪你度过漫长岁月 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 6,
+      "id": "D03",
+      "original_github_pair": false,
+      "source_song": "体面",
+      "reference_song": "从前慢",
+      "direction_code": "FF",
+      "direction": "女 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D03/source.wav",
+          "sha256": "177d0211aeda35d5c83282192c7c748de0225b3204185ad0aecb55ded1b7f89f",
+          "samples": 222720,
+          "sample_rate": 48000,
+          "duration_seconds": 4.64,
+          "aria_label": "D03 体面 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D03/reference.wav",
+          "sha256": "e9ff569d73856d1a5ab4ddda41a630ba793bdecf2f0f42bc1d38a817e6f8879d",
+          "samples": 163003,
+          "sample_rate": 48000,
+          "duration_seconds": 3.3958958333333333,
+          "aria_label": "D03 体面 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D03/fixed.wav",
+          "sha256": "387d5275db746fc8a31b2e8f63a89e1fc81a217457fdc25a23bfc710cbdc7d62",
+          "samples": 222720,
+          "sample_rate": 48000,
+          "duration_seconds": 4.64,
+          "aria_label": "D03 体面 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D03/residual5400.wav",
+          "sha256": "f53b567a4ce060d74983060887a95d021a7e5180b3c337a85b489125967e3536",
+          "samples": 222720,
+          "sample_rate": 48000,
+          "duration_seconds": 4.64,
+          "aria_label": "D03 体面 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D03/joint1600.wav",
+          "sha256": "11771c29329e9869aed65e13ab549ce3c57d0d427244d69fc8725fac8f30c578",
+          "samples": 222720,
+          "sample_rate": 48000,
+          "duration_seconds": 4.64,
+          "aria_label": "D03 体面 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 7,
+      "id": "D04",
+      "original_github_pair": false,
+      "source_song": "听海",
+      "reference_song": "好久不见",
+      "direction_code": "FF",
+      "direction": "女 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D04/source.wav",
+          "sha256": "e570cb79939add9db50633812714700fdb4707f44d29213b35c1fee1c56c6408",
+          "samples": 361920,
+          "sample_rate": 48000,
+          "duration_seconds": 7.54,
+          "aria_label": "D04 听海 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D04/reference.wav",
+          "sha256": "ec9968b0c56d10b5a3a65d15525992ab994884d74e8325a4eed079755009e48b",
+          "samples": 550560,
+          "sample_rate": 48000,
+          "duration_seconds": 11.47,
+          "aria_label": "D04 听海 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D04/fixed.wav",
+          "sha256": "815886425ab01aef836fd9b7ddd734c9446f90d2de9ac643c0712e44e0a40d9e",
+          "samples": 361984,
+          "sample_rate": 48000,
+          "duration_seconds": 7.541333333333333,
+          "aria_label": "D04 听海 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D04/residual5400.wav",
+          "sha256": "b8bfb42cdb1b08e023bd0637a4459d9332fbebefeb8547fd2a8f3b09396c5a79",
+          "samples": 361984,
+          "sample_rate": 48000,
+          "duration_seconds": 7.541333333333333,
+          "aria_label": "D04 听海 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D04/joint1600.wav",
+          "sha256": "00407389b3d8111bd481a17ca828b5b5d4e4de44ebdfe8b53e8bbb2f827abd63",
+          "samples": 361984,
+          "sample_rate": 48000,
+          "duration_seconds": 7.541333333333333,
+          "aria_label": "D04 听海 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 8,
+      "id": "D11",
+      "original_github_pair": false,
+      "source_song": "遇见",
+      "reference_song": "玫瑰三愿",
+      "direction_code": "MM",
+      "direction": "男 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D11/source.wav",
+          "sha256": "85e1a95b242ad9a09caa057947d70a405e701bcab8a7bd1aab217acbbc09eccb",
+          "samples": 232800,
+          "sample_rate": 48000,
+          "duration_seconds": 4.85,
+          "aria_label": "D11 遇见 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D11/reference.wav",
+          "sha256": "8065d0203adc4c7771b26f94d4b01c1469a75a2d8bffe04211a777dd649542d6",
+          "samples": 426583,
+          "sample_rate": 48000,
+          "duration_seconds": 8.887145833333333,
+          "aria_label": "D11 遇见 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D11/fixed.wav",
+          "sha256": "56f0b0e0d5467f47c249a64451a6c7f576a1a24cf2f524f20a17c4b45a9580df",
+          "samples": 232704,
+          "sample_rate": 48000,
+          "duration_seconds": 4.848,
+          "aria_label": "D11 遇见 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D11/residual5400.wav",
+          "sha256": "a683e866edf1d08087d7e27e4d8aff7235cbbe72bba313eae4973ddb3ea46f3f",
+          "samples": 232704,
+          "sample_rate": 48000,
+          "duration_seconds": 4.848,
+          "aria_label": "D11 遇见 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D11/joint1600.wav",
+          "sha256": "9d301556edcb312954be819d5b800bc902b7b05ddc9f688f8cedf75d8b111fdf",
+          "samples": 232704,
+          "sample_rate": 48000,
+          "duration_seconds": 4.848,
+          "aria_label": "D11 遇见 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 9,
+      "id": "D13",
+      "original_github_pair": false,
+      "source_song": "好久不见",
+      "reference_song": "不染",
+      "direction_code": "MM",
+      "direction": "男 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D13/source.wav",
+          "sha256": "525602961c69eac47982ae26d477bf814a47732c1521854bcc86c44f474e355f",
+          "samples": 203761,
+          "sample_rate": 48000,
+          "duration_seconds": 4.245020833333333,
+          "aria_label": "D13 好久不见 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D13/reference.wav",
+          "sha256": "b070a12f3190409843902cd67be4f4c0d0b2a3f947b2e138a2e49012ebde8319",
+          "samples": 303456,
+          "sample_rate": 48000,
+          "duration_seconds": 6.322,
+          "aria_label": "D13 好久不见 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D13/fixed.wav",
+          "sha256": "39828a888972e584131719a38b5488657d25e31a76da5bf87f7c211369c5b660",
+          "samples": 203776,
+          "sample_rate": 48000,
+          "duration_seconds": 4.245333333333333,
+          "aria_label": "D13 好久不见 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D13/residual5400.wav",
+          "sha256": "1ebb8443750bae5608b5efb090e489a1a63dc5584ec7ecaa2c2df7cdf911ae7c",
+          "samples": 203776,
+          "sample_rate": 48000,
+          "duration_seconds": 4.245333333333333,
+          "aria_label": "D13 好久不见 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D13/joint1600.wav",
+          "sha256": "81f0ae64d63441b2a29d505e7bf7bd220965812d2b0d0fc2a4a005dab3387a12",
+          "samples": 203776,
+          "sample_rate": 48000,
+          "duration_seconds": 4.245333333333333,
+          "aria_label": "D13 好久不见 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 10,
+      "id": "D14",
+      "original_github_pair": false,
+      "source_song": "一千年以后",
+      "reference_song": "不染",
+      "direction_code": "MM",
+      "direction": "男 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D14/source.wav",
+          "sha256": "788a658a8c04df4d5cdff970a408adfaa7d0e925ced9a0dab08462859263d21d",
+          "samples": 272640,
+          "sample_rate": 48000,
+          "duration_seconds": 5.68,
+          "aria_label": "D14 一千年以后 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D14/reference.wav",
+          "sha256": "b070a12f3190409843902cd67be4f4c0d0b2a3f947b2e138a2e49012ebde8319",
+          "samples": 303456,
+          "sample_rate": 48000,
+          "duration_seconds": 6.322,
+          "aria_label": "D14 一千年以后 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D14/fixed.wav",
+          "sha256": "4cae5aeb2adec67c006dc1d81aec889a2a0de417026e5d79f285805577d71ba5",
+          "samples": 272640,
+          "sample_rate": 48000,
+          "duration_seconds": 5.68,
+          "aria_label": "D14 一千年以后 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D14/residual5400.wav",
+          "sha256": "dc2fd8d54043486f18bdcbc547071a39773776b1a8bf99377946cafbb3c8d7ea",
+          "samples": 272640,
+          "sample_rate": 48000,
+          "duration_seconds": 5.68,
+          "aria_label": "D14 一千年以后 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D14/joint1600.wav",
+          "sha256": "f802fcf80b370989527cae3e2d789599e9ae00c9be53dac63fd975d599247574",
+          "samples": 272640,
+          "sample_rate": 48000,
+          "duration_seconds": 5.68,
+          "aria_label": "D14 一千年以后 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 11,
+      "id": "D21",
+      "original_github_pair": false,
+      "source_song": "演员",
+      "reference_song": "不染",
+      "direction_code": "FM",
+      "direction": "女 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D21/source.wav",
+          "sha256": "ed3536c62a70410115beda6714dbc74363bc1618cb61d2f829445bf2ef4ff49b",
+          "samples": 242641,
+          "sample_rate": 48000,
+          "duration_seconds": 5.055020833333334,
+          "aria_label": "D21 演员 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D21/reference.wav",
+          "sha256": "b070a12f3190409843902cd67be4f4c0d0b2a3f947b2e138a2e49012ebde8319",
+          "samples": 303456,
+          "sample_rate": 48000,
+          "duration_seconds": 6.322,
+          "aria_label": "D21 演员 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D21/fixed.wav",
+          "sha256": "ee0159860446cc4b774b34ccd308f857ccbc319bd0d74a43a22c05214d2d2ea7",
+          "samples": 242688,
+          "sample_rate": 48000,
+          "duration_seconds": 5.056,
+          "aria_label": "D21 演员 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D21/residual5400.wav",
+          "sha256": "6176ebeb6d76d5f66e0bd0ddf8f647feed0a27bc4327007018a4d752110f2d22",
+          "samples": 242688,
+          "sample_rate": 48000,
+          "duration_seconds": 5.056,
+          "aria_label": "D21 演员 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D21/joint1600.wav",
+          "sha256": "bba6208754ee418dadc9aac2c91c3f7e18bc47646ca75ddad0e02421fe235a2f",
+          "samples": 242688,
+          "sample_rate": 48000,
+          "duration_seconds": 5.056,
+          "aria_label": "D21 演员 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 12,
+      "id": "D22",
+      "original_github_pair": false,
+      "source_song": "刻在我心底的名字",
+      "reference_song": "天翻地覆",
+      "direction_code": "FM",
+      "direction": "女 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D22/source.wav",
+          "sha256": "8beb9a170ee56d9c7829c0f621dfdf1e01bf34c65fd10b86528285a11d32bffc",
+          "samples": 295920,
+          "sample_rate": 48000,
+          "duration_seconds": 6.165,
+          "aria_label": "D22 刻在我心底的名字 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D22/reference.wav",
+          "sha256": "0af3ffd46c6e28da0400d7230ad81f84cc0c83d8ef0e1fdba5902d67dc500bd8",
+          "samples": 178080,
+          "sample_rate": 48000,
+          "duration_seconds": 3.71,
+          "aria_label": "D22 刻在我心底的名字 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D22/fixed.wav",
+          "sha256": "fe83d0f6da404c186eeead0772d9a25b0dcc8de4c1f69860936a178f6151bea5",
+          "samples": 295936,
+          "sample_rate": 48000,
+          "duration_seconds": 6.165333333333334,
+          "aria_label": "D22 刻在我心底的名字 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D22/residual5400.wav",
+          "sha256": "d77d618c984e15df4e280f7613988a490cd9ed329275e1c30f0277258635a57b",
+          "samples": 295936,
+          "sample_rate": 48000,
+          "duration_seconds": 6.165333333333334,
+          "aria_label": "D22 刻在我心底的名字 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D22/joint1600.wav",
+          "sha256": "40caf73579cbb3ef5865ad024f24161c6db25304c28213e24dba00523337a927",
+          "samples": 295936,
+          "sample_rate": 48000,
+          "duration_seconds": 6.165333333333334,
+          "aria_label": "D22 刻在我心底的名字 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 13,
+      "id": "D24",
+      "original_github_pair": false,
+      "source_song": "倒带",
+      "reference_song": "不染",
+      "direction_code": "FM",
+      "direction": "女 → 男",
+      "tracks": {
+        "source": {
+          "file": "audio/D24/source.wav",
+          "sha256": "204e3e12c29b9e6f07c7928c3c9dd8c1aadc60898b529b4c36ac3808fa072fcb",
+          "samples": 336240,
+          "sample_rate": 48000,
+          "duration_seconds": 7.005,
+          "aria_label": "D24 倒带 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D24/reference.wav",
+          "sha256": "b070a12f3190409843902cd67be4f4c0d0b2a3f947b2e138a2e49012ebde8319",
+          "samples": 303456,
+          "sample_rate": 48000,
+          "duration_seconds": 6.322,
+          "aria_label": "D24 倒带 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D24/fixed.wav",
+          "sha256": "97cb0c23c5065afb5bfc2a2fe8e0246c98fa6d6e02c1e34a4be013f941c64c5f",
+          "samples": 336128,
+          "sample_rate": 48000,
+          "duration_seconds": 7.002666666666666,
+          "aria_label": "D24 倒带 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D24/residual5400.wav",
+          "sha256": "0e59c8890f713ca82886ca66cf8e521ae4ba9fcad4b12d5df5561a811e64cbac",
+          "samples": 336128,
+          "sample_rate": 48000,
+          "duration_seconds": 7.002666666666666,
+          "aria_label": "D24 倒带 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D24/joint1600.wav",
+          "sha256": "e2355c067dc5ada9c3f74467870b586daca31aa62da64c18535a4f9ec8dfba4f",
+          "samples": 336128,
+          "sample_rate": 48000,
+          "duration_seconds": 7.002666666666666,
+          "aria_label": "D24 倒带 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 14,
+      "id": "D32",
+      "original_github_pair": false,
+      "source_song": "南山南",
+      "reference_song": "演员",
+      "direction_code": "MF",
+      "direction": "男 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D32/source.wav",
+          "sha256": "edecb4f3b5fddf42194523f2d8b5f1d5dcf472d61a80b7781b6bad03abdc7291",
+          "samples": 196560,
+          "sample_rate": 48000,
+          "duration_seconds": 4.095,
+          "aria_label": "D32 南山南 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D32/reference.wav",
+          "sha256": "99bb4991e12cb8693b99d19e93816cdea8ab3a3cf26fc27de2e9799e07347e2d",
+          "samples": 156241,
+          "sample_rate": 48000,
+          "duration_seconds": 3.2550208333333335,
+          "aria_label": "D32 南山南 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D32/fixed.wav",
+          "sha256": "c756c8c0c4a051e9c0c30fe225d1fb2b210ca8af7c50f4d642a0619a9cf5e885",
+          "samples": 196608,
+          "sample_rate": 48000,
+          "duration_seconds": 4.096,
+          "aria_label": "D32 南山南 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D32/residual5400.wav",
+          "sha256": "da38146ab14119c0878524b44f68d8121498c0ea7c59bd6ba660894e3f94d80f",
+          "samples": 196608,
+          "sample_rate": 48000,
+          "duration_seconds": 4.096,
+          "aria_label": "D32 南山南 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D32/joint1600.wav",
+          "sha256": "0a0a7d8a1ad9e40bb01ca151858c73d67398569fe33a3db84935bdf04c224859",
+          "samples": 196608,
+          "sample_rate": 48000,
+          "duration_seconds": 4.096,
+          "aria_label": "D32 南山南 ③ 新联合 · 1600 步"
+        }
+      }
+    },
+    {
+      "number": 15,
+      "id": "D33",
+      "original_github_pair": false,
+      "source_song": "我只在乎你",
+      "reference_song": "好久不见",
+      "direction_code": "MF",
+      "direction": "男 → 女",
+      "tracks": {
+        "source": {
+          "file": "audio/D33/source.wav",
+          "sha256": "059aafa546e718d5512ca50d704ea9382d9a925858566cfe2ba74d180c884c91",
+          "samples": 181681,
+          "sample_rate": 48000,
+          "duration_seconds": 3.7850208333333333,
+          "aria_label": "D33 我只在乎你 Source · 源歌声"
+        },
+        "reference": {
+          "file": "audio/D33/reference.wav",
+          "sha256": "ec9968b0c56d10b5a3a65d15525992ab994884d74e8325a4eed079755009e48b",
+          "samples": 550560,
+          "sample_rate": 48000,
+          "duration_seconds": 11.47,
+          "aria_label": "D33 我只在乎你 Ref · 参考歌声"
+        },
+        "fixed": {
+          "file": "audio/D33/fixed.wav",
+          "sha256": "405f7d6ad5535450b623b0b19dc5a9a149607d8089d32b8837a958069f43ffb0",
+          "samples": 181760,
+          "sample_rate": 48000,
+          "duration_seconds": 3.7866666666666666,
+          "aria_label": "D33 我只在乎你 ① MIDI"
+        },
+        "residual5400": {
+          "file": "audio/D33/residual5400.wav",
+          "sha256": "972079b42699e32ff4fa200367b4e8f150673dca4ceaeb0855dbd2b6706896fa",
+          "samples": 181760,
+          "sample_rate": 48000,
+          "duration_seconds": 3.7866666666666666,
+          "aria_label": "D33 我只在乎你 ② 新残差 · 5400 步"
+        },
+        "joint1600": {
+          "file": "audio/D33/joint1600.wav",
+          "sha256": "6a341b692fc9e7b7c2c10d472a5f6d133990197d473a0cdcfc1321dab0759fed",
+          "samples": 181760,
+          "sample_rate": 48000,
+          "duration_seconds": 3.7866666666666666,
+          "aria_label": "D33 我只在乎你 ③ 新联合 · 1600 步"
+        }
+      }
+    }
+  ]
+}

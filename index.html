@@ -1,0 +1,331 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>15 组试听 · 三版本对比</title><style>
+:root{color-scheme:light;--ink:#182d39;--muted:#60727c;--line:#dce4e6;--teal:#126b69;--paper:#fff;--bg:#f1f5f5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 "Microsoft YaHei",system-ui,sans-serif}
+main{max-width:1440px;margin:auto;padding:40px 28px 56px}h1{font-size:34px;line-height:1.25;margin:10px 0 16px;letter-spacing:-.6px}
+.eyebrow{font-size:12px;color:var(--teal);font-weight:700;letter-spacing:1.5px}.intro{max-width:950px;color:var(--muted);margin:8px 0}
+.counts{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.counts span{border:1px solid var(--line);border-radius:7px;background:white;padding:5px 12px;font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 18px}button{font:inherit;font-size:13px;cursor:pointer;border:1px solid #cbd6da;border-radius:6px;background:white;color:var(--muted);padding:6px 15px}
+button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:white}button:hover{border-color:var(--teal)}button:focus-visible,a:focus-visible{outline:3px solid #72c9c5;outline-offset:3px}
+.case{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin:0 0 22px;overflow:hidden;scroll-margin-top:20px}
+.case-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.case-heading>div{display:flex;align-items:center;gap:12px}.number{color:#82939c;font-size:13px;font-variant-numeric:tabular-nums}h2{font-size:19px;line-height:1.4;margin:0;font-weight:650}
+.direction{font-size:12px;color:var(--muted);white-space:nowrap}.badge{font-size:11px;background:#f1f4f5;color:#637983;padding:3px 8px;border-radius:4px;white-space:nowrap}.badge.original{background:#e3f2ee;color:#28665a}
+.inputs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:17px 22px;background:#f8fafb}
+.outputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:19px 22px 21px;border-top:1px solid var(--line)}
+.player{min-width:0}.track-label{font-weight:650;font-size:14px}.track-detail{color:var(--muted);font-size:12px;margin:4px 0 10px;min-height:20px}.outputs .track-detail{min-height:39px}
+audio{display:block;width:100%;height:38px}a{color:var(--teal);text-underline-offset:3px}.download{display:inline-block;font-size:11px;color:#74838b;text-decoration:none;margin-top:5px}.download:hover{text-decoration:underline}
+footer{color:var(--muted);font-size:12px;padding:8px 0}footer p{margin:5px 0}.hidden{display:none!important}
+@media(max-width:1000px){.outputs{grid-template-columns:repeat(2,minmax(0,1fr))}.outputs .track-detail{min-height:20px}}
+@media(max-width:600px){main{padding:24px 12px}h1{font-size:27px}.case-heading{padding:14px;align-items:flex-start;flex-wrap:wrap}.case-heading>div{gap:8px}h2{font-size:17px}.inputs,.outputs{padding:14px;gap:18px;grid-template-columns:1fr}.counts{gap:6px}.counts span{font-size:12px}.intro{font-size:13px}}
+</style></head><body><main><div class="eyebrow">VOICE CONVERSION / LISTENING DEMO</div><h1>15 组试听 · 三版本对比</h1>
+<p class="intro">同一组 Source 和 Ref，比较 MIDI、新残差 5400 和新联合 1600。三版均使用三步精修（20 → 10 → 5）。</p>
+<p class="intro">十五组沿用原来的歌曲配对。MIDI 保留原录音；两组新权重补充生成，F0 与音素输入已与原版本逐项核对。</p>
+<div class="counts"><span>15 组</span><span>75 条 WAV</span><span>5 组原配对 + 10 组新增</span><span>逐块输入 · 流式生成</span></div>
+<nav class="filters" aria-label="转换方向筛选"><button data-filter="all" aria-pressed="true">全部 15</button><button data-filter="FF" aria-pressed="false">女 → 女 4</button><button data-filter="MM" aria-pressed="false">男 → 男 4</button><button data-filter="FM" aria-pressed="false">女 → 男 4</button><button data-filter="MF" aria-pressed="false">男 → 女 3</button></nav>
+<section class="case" id="D01" data-category="FF">
+        <header class="case-heading"><div><span class="number">01</span><h2>后来</h2>
+        <span class="direction">女 → 女</span></div><span class="badge original">GitHub 原五组 · D01</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">后来</div>
+    <audio controls preload="metadata" src="audio/D01/source.wav" aria-label="D01 后来 Source · 源歌声"></audio>
+    <a class="download" href="audio/D01/source.wav" download>下载 WAV · 6.49s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">演员</div>
+    <audio controls preload="metadata" src="audio/D01/reference.wav" aria-label="D01 后来 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D01/reference.wav" download>下载 WAV · 3.26s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D01/fixed.wav" aria-label="D01 后来 ① MIDI"></audio>
+    <a class="download" href="audio/D01/fixed.wav" download>下载 WAV · 6.49s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D01/residual5400.wav" aria-label="D01 后来 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D01/residual5400.wav" download>下载 WAV · 6.49s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D01/joint1600.wav" aria-label="D01 后来 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D01/joint1600.wav" download>下载 WAV · 6.49s</a></div></div></section>
+<section class="case" id="D02" data-category="FF">
+        <header class="case-heading"><div><span class="number">02</span><h2>小幸运</h2>
+        <span class="direction">女 → 女</span></div><span class="badge original">GitHub 原五组 · D02</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">小幸运</div>
+    <audio controls preload="metadata" src="audio/D02/source.wav" aria-label="D02 小幸运 Source · 源歌声"></audio>
+    <a class="download" href="audio/D02/source.wav" download>下载 WAV · 4.36s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">成都</div>
+    <audio controls preload="metadata" src="audio/D02/reference.wav" aria-label="D02 小幸运 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D02/reference.wav" download>下载 WAV · 7.90s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D02/fixed.wav" aria-label="D02 小幸运 ① MIDI"></audio>
+    <a class="download" href="audio/D02/fixed.wav" download>下载 WAV · 4.36s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D02/residual5400.wav" aria-label="D02 小幸运 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D02/residual5400.wav" download>下载 WAV · 4.36s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D02/joint1600.wav" aria-label="D02 小幸运 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D02/joint1600.wav" download>下载 WAV · 4.36s</a></div></div></section>
+<section class="case" id="D12" data-category="MM">
+        <header class="case-heading"><div><span class="number">03</span><h2>大鱼</h2>
+        <span class="direction">男 → 男</span></div><span class="badge original">GitHub 原五组 · D12</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">大鱼</div>
+    <audio controls preload="metadata" src="audio/D12/source.wav" aria-label="D12 大鱼 Source · 源歌声"></audio>
+    <a class="download" href="audio/D12/source.wav" download>下载 WAV · 5.12s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">天翻地覆</div>
+    <audio controls preload="metadata" src="audio/D12/reference.wav" aria-label="D12 大鱼 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D12/reference.wav" download>下载 WAV · 3.71s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D12/fixed.wav" aria-label="D12 大鱼 ① MIDI"></audio>
+    <a class="download" href="audio/D12/fixed.wav" download>下载 WAV · 5.12s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D12/residual5400.wav" aria-label="D12 大鱼 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D12/residual5400.wav" download>下载 WAV · 5.12s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D12/joint1600.wav" aria-label="D12 大鱼 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D12/joint1600.wav" download>下载 WAV · 5.12s</a></div></div></section>
+<section class="case" id="D23" data-category="FM">
+        <header class="case-heading"><div><span class="number">04</span><h2>晴天</h2>
+        <span class="direction">女 → 男</span></div><span class="badge original">GitHub 原五组 · D23</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">晴天</div>
+    <audio controls preload="metadata" src="audio/D23/source.wav" aria-label="D23 晴天 Source · 源歌声"></audio>
+    <a class="download" href="audio/D23/source.wav" download>下载 WAV · 6.90s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">玫瑰三愿</div>
+    <audio controls preload="metadata" src="audio/D23/reference.wav" aria-label="D23 晴天 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D23/reference.wav" download>下载 WAV · 8.89s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D23/fixed.wav" aria-label="D23 晴天 ① MIDI"></audio>
+    <a class="download" href="audio/D23/fixed.wav" download>下载 WAV · 6.90s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D23/residual5400.wav" aria-label="D23 晴天 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D23/residual5400.wav" download>下载 WAV · 6.90s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D23/joint1600.wav" aria-label="D23 晴天 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D23/joint1600.wav" download>下载 WAV · 6.90s</a></div></div></section>
+<section class="case" id="D31" data-category="MF">
+        <header class="case-heading"><div><span class="number">05</span><h2>陪你度过漫长岁月</h2>
+        <span class="direction">男 → 女</span></div><span class="badge original">GitHub 原五组 · D31</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">陪你度过漫长岁月</div>
+    <audio controls preload="metadata" src="audio/D31/source.wav" aria-label="D31 陪你度过漫长岁月 Source · 源歌声"></audio>
+    <a class="download" href="audio/D31/source.wav" download>下载 WAV · 4.13s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">从前慢</div>
+    <audio controls preload="metadata" src="audio/D31/reference.wav" aria-label="D31 陪你度过漫长岁月 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D31/reference.wav" download>下载 WAV · 3.40s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D31/fixed.wav" aria-label="D31 陪你度过漫长岁月 ① MIDI"></audio>
+    <a class="download" href="audio/D31/fixed.wav" download>下载 WAV · 4.13s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D31/residual5400.wav" aria-label="D31 陪你度过漫长岁月 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D31/residual5400.wav" download>下载 WAV · 4.13s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D31/joint1600.wav" aria-label="D31 陪你度过漫长岁月 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D31/joint1600.wav" download>下载 WAV · 4.13s</a></div></div></section>
+<section class="case" id="D03" data-category="FF">
+        <header class="case-heading"><div><span class="number">06</span><h2>体面</h2>
+        <span class="direction">女 → 女</span></div><span class="badge ">新增十组 · D03</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">体面</div>
+    <audio controls preload="metadata" src="audio/D03/source.wav" aria-label="D03 体面 Source · 源歌声"></audio>
+    <a class="download" href="audio/D03/source.wav" download>下载 WAV · 4.64s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">从前慢</div>
+    <audio controls preload="metadata" src="audio/D03/reference.wav" aria-label="D03 体面 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D03/reference.wav" download>下载 WAV · 3.40s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D03/fixed.wav" aria-label="D03 体面 ① MIDI"></audio>
+    <a class="download" href="audio/D03/fixed.wav" download>下载 WAV · 4.64s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D03/residual5400.wav" aria-label="D03 体面 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D03/residual5400.wav" download>下载 WAV · 4.64s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D03/joint1600.wav" aria-label="D03 体面 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D03/joint1600.wav" download>下载 WAV · 4.64s</a></div></div></section>
+<section class="case" id="D04" data-category="FF">
+        <header class="case-heading"><div><span class="number">07</span><h2>听海</h2>
+        <span class="direction">女 → 女</span></div><span class="badge ">新增十组 · D04</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">听海</div>
+    <audio controls preload="metadata" src="audio/D04/source.wav" aria-label="D04 听海 Source · 源歌声"></audio>
+    <a class="download" href="audio/D04/source.wav" download>下载 WAV · 7.54s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">好久不见</div>
+    <audio controls preload="metadata" src="audio/D04/reference.wav" aria-label="D04 听海 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D04/reference.wav" download>下载 WAV · 11.47s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D04/fixed.wav" aria-label="D04 听海 ① MIDI"></audio>
+    <a class="download" href="audio/D04/fixed.wav" download>下载 WAV · 7.54s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D04/residual5400.wav" aria-label="D04 听海 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D04/residual5400.wav" download>下载 WAV · 7.54s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D04/joint1600.wav" aria-label="D04 听海 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D04/joint1600.wav" download>下载 WAV · 7.54s</a></div></div></section>
+<section class="case" id="D11" data-category="MM">
+        <header class="case-heading"><div><span class="number">08</span><h2>遇见</h2>
+        <span class="direction">男 → 男</span></div><span class="badge ">新增十组 · D11</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">遇见</div>
+    <audio controls preload="metadata" src="audio/D11/source.wav" aria-label="D11 遇见 Source · 源歌声"></audio>
+    <a class="download" href="audio/D11/source.wav" download>下载 WAV · 4.85s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">玫瑰三愿</div>
+    <audio controls preload="metadata" src="audio/D11/reference.wav" aria-label="D11 遇见 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D11/reference.wav" download>下载 WAV · 8.89s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D11/fixed.wav" aria-label="D11 遇见 ① MIDI"></audio>
+    <a class="download" href="audio/D11/fixed.wav" download>下载 WAV · 4.85s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D11/residual5400.wav" aria-label="D11 遇见 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D11/residual5400.wav" download>下载 WAV · 4.85s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D11/joint1600.wav" aria-label="D11 遇见 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D11/joint1600.wav" download>下载 WAV · 4.85s</a></div></div></section>
+<section class="case" id="D13" data-category="MM">
+        <header class="case-heading"><div><span class="number">09</span><h2>好久不见</h2>
+        <span class="direction">男 → 男</span></div><span class="badge ">新增十组 · D13</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">好久不见</div>
+    <audio controls preload="metadata" src="audio/D13/source.wav" aria-label="D13 好久不见 Source · 源歌声"></audio>
+    <a class="download" href="audio/D13/source.wav" download>下载 WAV · 4.25s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">不染</div>
+    <audio controls preload="metadata" src="audio/D13/reference.wav" aria-label="D13 好久不见 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D13/reference.wav" download>下载 WAV · 6.32s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D13/fixed.wav" aria-label="D13 好久不见 ① MIDI"></audio>
+    <a class="download" href="audio/D13/fixed.wav" download>下载 WAV · 4.25s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D13/residual5400.wav" aria-label="D13 好久不见 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D13/residual5400.wav" download>下载 WAV · 4.25s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D13/joint1600.wav" aria-label="D13 好久不见 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D13/joint1600.wav" download>下载 WAV · 4.25s</a></div></div></section>
+<section class="case" id="D14" data-category="MM">
+        <header class="case-heading"><div><span class="number">10</span><h2>一千年以后</h2>
+        <span class="direction">男 → 男</span></div><span class="badge ">新增十组 · D14</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">一千年以后</div>
+    <audio controls preload="metadata" src="audio/D14/source.wav" aria-label="D14 一千年以后 Source · 源歌声"></audio>
+    <a class="download" href="audio/D14/source.wav" download>下载 WAV · 5.68s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">不染</div>
+    <audio controls preload="metadata" src="audio/D14/reference.wav" aria-label="D14 一千年以后 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D14/reference.wav" download>下载 WAV · 6.32s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D14/fixed.wav" aria-label="D14 一千年以后 ① MIDI"></audio>
+    <a class="download" href="audio/D14/fixed.wav" download>下载 WAV · 5.68s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D14/residual5400.wav" aria-label="D14 一千年以后 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D14/residual5400.wav" download>下载 WAV · 5.68s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D14/joint1600.wav" aria-label="D14 一千年以后 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D14/joint1600.wav" download>下载 WAV · 5.68s</a></div></div></section>
+<section class="case" id="D21" data-category="FM">
+        <header class="case-heading"><div><span class="number">11</span><h2>演员</h2>
+        <span class="direction">女 → 男</span></div><span class="badge ">新增十组 · D21</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">演员</div>
+    <audio controls preload="metadata" src="audio/D21/source.wav" aria-label="D21 演员 Source · 源歌声"></audio>
+    <a class="download" href="audio/D21/source.wav" download>下载 WAV · 5.06s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">不染</div>
+    <audio controls preload="metadata" src="audio/D21/reference.wav" aria-label="D21 演员 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D21/reference.wav" download>下载 WAV · 6.32s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D21/fixed.wav" aria-label="D21 演员 ① MIDI"></audio>
+    <a class="download" href="audio/D21/fixed.wav" download>下载 WAV · 5.06s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D21/residual5400.wav" aria-label="D21 演员 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D21/residual5400.wav" download>下载 WAV · 5.06s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D21/joint1600.wav" aria-label="D21 演员 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D21/joint1600.wav" download>下载 WAV · 5.06s</a></div></div></section>
+<section class="case" id="D22" data-category="FM">
+        <header class="case-heading"><div><span class="number">12</span><h2>刻在我心底的名字</h2>
+        <span class="direction">女 → 男</span></div><span class="badge ">新增十组 · D22</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">刻在我心底的名字</div>
+    <audio controls preload="metadata" src="audio/D22/source.wav" aria-label="D22 刻在我心底的名字 Source · 源歌声"></audio>
+    <a class="download" href="audio/D22/source.wav" download>下载 WAV · 6.17s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">天翻地覆</div>
+    <audio controls preload="metadata" src="audio/D22/reference.wav" aria-label="D22 刻在我心底的名字 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D22/reference.wav" download>下载 WAV · 3.71s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D22/fixed.wav" aria-label="D22 刻在我心底的名字 ① MIDI"></audio>
+    <a class="download" href="audio/D22/fixed.wav" download>下载 WAV · 6.17s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D22/residual5400.wav" aria-label="D22 刻在我心底的名字 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D22/residual5400.wav" download>下载 WAV · 6.17s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D22/joint1600.wav" aria-label="D22 刻在我心底的名字 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D22/joint1600.wav" download>下载 WAV · 6.17s</a></div></div></section>
+<section class="case" id="D24" data-category="FM">
+        <header class="case-heading"><div><span class="number">13</span><h2>倒带</h2>
+        <span class="direction">女 → 男</span></div><span class="badge ">新增十组 · D24</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">倒带</div>
+    <audio controls preload="metadata" src="audio/D24/source.wav" aria-label="D24 倒带 Source · 源歌声"></audio>
+    <a class="download" href="audio/D24/source.wav" download>下载 WAV · 7.00s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">不染</div>
+    <audio controls preload="metadata" src="audio/D24/reference.wav" aria-label="D24 倒带 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D24/reference.wav" download>下载 WAV · 6.32s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D24/fixed.wav" aria-label="D24 倒带 ① MIDI"></audio>
+    <a class="download" href="audio/D24/fixed.wav" download>下载 WAV · 7.00s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D24/residual5400.wav" aria-label="D24 倒带 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D24/residual5400.wav" download>下载 WAV · 7.00s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D24/joint1600.wav" aria-label="D24 倒带 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D24/joint1600.wav" download>下载 WAV · 7.00s</a></div></div></section>
+<section class="case" id="D32" data-category="MF">
+        <header class="case-heading"><div><span class="number">14</span><h2>南山南</h2>
+        <span class="direction">男 → 女</span></div><span class="badge ">新增十组 · D32</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">南山南</div>
+    <audio controls preload="metadata" src="audio/D32/source.wav" aria-label="D32 南山南 Source · 源歌声"></audio>
+    <a class="download" href="audio/D32/source.wav" download>下载 WAV · 4.09s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">演员</div>
+    <audio controls preload="metadata" src="audio/D32/reference.wav" aria-label="D32 南山南 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D32/reference.wav" download>下载 WAV · 3.26s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D32/fixed.wav" aria-label="D32 南山南 ① MIDI"></audio>
+    <a class="download" href="audio/D32/fixed.wav" download>下载 WAV · 4.10s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D32/residual5400.wav" aria-label="D32 南山南 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D32/residual5400.wav" download>下载 WAV · 4.10s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D32/joint1600.wav" aria-label="D32 南山南 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D32/joint1600.wav" download>下载 WAV · 4.10s</a></div></div></section>
+<section class="case" id="D33" data-category="MF">
+        <header class="case-heading"><div><span class="number">15</span><h2>我只在乎你</h2>
+        <span class="direction">男 → 女</span></div><span class="badge ">新增十组 · D33</span></header>
+        <div class="inputs"><div class="player source"><div class="track-label">Source · 源歌声</div>
+    <div class="track-detail">我只在乎你</div>
+    <audio controls preload="metadata" src="audio/D33/source.wav" aria-label="D33 我只在乎你 Source · 源歌声"></audio>
+    <a class="download" href="audio/D33/source.wav" download>下载 WAV · 3.79s</a></div><div class="player reference"><div class="track-label">Ref · 参考歌声</div>
+    <div class="track-detail">好久不见</div>
+    <audio controls preload="metadata" src="audio/D33/reference.wav" aria-label="D33 我只在乎你 Ref · 参考歌声"></audio>
+    <a class="download" href="audio/D33/reference.wav" download>下载 WAV · 11.47s</a></div></div>
+        <div class="outputs"><div class="player fixed"><div class="track-label">① MIDI</div>
+    <div class="track-detail">保留 MIDI · 已修复停顿与衔接</div>
+    <audio controls preload="metadata" src="audio/D33/fixed.wav" aria-label="D33 我只在乎你 ① MIDI"></audio>
+    <a class="download" href="audio/D33/fixed.wav" download>下载 WAV · 3.79s</a></div><div class="player residual5400"><div class="track-label">② 新残差 · 5400 步</div>
+    <div class="track-detail">老师新方法 · 仅训练残差</div>
+    <audio controls preload="metadata" src="audio/D33/residual5400.wav" aria-label="D33 我只在乎你 ② 新残差 · 5400 步"></audio>
+    <a class="download" href="audio/D33/residual5400.wav" download>下载 WAV · 3.79s</a></div><div class="player joint1600"><div class="track-label">③ 新联合 · 1600 步</div>
+    <div class="track-detail">老师新方法 · 联合微调</div>
+    <audio controls preload="metadata" src="audio/D33/joint1600.wav" aria-label="D33 我只在乎你 ③ 新联合 · 1600 步"></audio>
+    <a class="download" href="audio/D33/joint1600.wav" download>下载 WAV · 3.79s</a></div></div></section>
+<footer><p>① MIDI：保留已修复的停顿与衔接处理。</p>
+<p>② 新残差：5400 步最佳权重。③ 新联合：1600 步最佳权重。两版均使用老师提出的音素段聚合与逐帧软音素方法。</p>
+<p>新增两版按原时间顺序复用已保存的 F0，音素随 Source 的 20ms 输入块提取。此页用于听感对比，不作为端到端延迟测量。播放新音频时，上一条自动暂停。</p>
+<p><a href="试听说明.md">试听说明</a> · <a href="demo_manifest.csv" download>75 条音频清单</a></p></footer></main>
+<script>document.querySelectorAll('audio').forEach(a=>a.addEventListener('play',()=>{document.querySelectorAll('audio').forEach(b=>{if(a!==b)b.pause()})}));
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{const f=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelectorAll('.case').forEach(c=>{const hide=f!=='all'&&c.dataset.category!==f;c.classList.toggle('hidden',hide);if(hide)c.querySelectorAll('audio').forEach(a=>a.pause())})}));</script></body></html>
